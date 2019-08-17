@@ -2,6 +2,7 @@ $primary: #f6a523;
 $dark: #222222;
 $light: #ffffff;
 $baseLine: 10px;
+$lineRatio: 1.2;
 
 %clearGutter {
   margin: 0;
@@ -13,7 +14,7 @@ $baseLine: 10px;
 }
 // 行高
 @function line($size) {
-  @return rhythm($size * 1.2 / $baseLine);
+  @return rhythm($size * $lineRatio / $baseLine);
 }
 
 @mixin font($size, $line-height: auto) {

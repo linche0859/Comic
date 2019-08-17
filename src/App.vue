@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+    <PageHeader/>
+    <transition name="fade" mode="out-in" appear>
+      <!--只要網址不一樣，就當作不一樣的router-view-->
+      <router-view style="padding:60px 0 40px 0;" :key="$route.fullPath"/>
+    </transition>
     <PageFooter/>
   </div>
 </template>

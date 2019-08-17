@@ -1,3 +1,9 @@
 <div class="comicChapter">
-  ComicChapter
+  <div class="view" v-if="pages && pages.length">
+    <!--component上做預設事件，需加上native-->
+    <ArrowButton class="prev" @click.native="prevHandler" />
+    <ImageArea :src="src" />
+    <ArrowButton class="next" :direction="1" @click.native="nextHandler" />
+  </div>
+  <ChapterThumb :page.sync="page" :pages="pages" :pchapter="pchapter" :nchapter="nchapter" />
 </div>

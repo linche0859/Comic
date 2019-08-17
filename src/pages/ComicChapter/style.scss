@@ -1,3 +1,21 @@
-.comicChapter{
-  
+@import '../../assets/style/utils';
+.comicChapter {
+  > div {
+    max-width: 960px;
+    margin: rhythm(1) auto;
+  }
+  > .view {
+    width: 100%;
+    // sass遇到calc會跳過編譯
+    height: calc(80vh - #{rhythm(10)});
+    font-size: 0px;
+    vertical-align: middle;
+    > .imageArea {
+      width: 80%;
+    }
+    > .arrowButton {
+      width: 10%;
+      height: 100%;
+    }
+  }
 }
